@@ -1,0 +1,57 @@
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+
+<head>
+
+<!-- this is header -->
+<div th:fragment="header">
+	<title th:attr="data-custom=#{thymeleaf.app.title}">Shop</title>
+	<!--TODO proveriti jel moguce ubaciti ovu vrednost-->
+
+	<link
+		href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+		rel="stylesheet" media="screen" />
+
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+	<link rel="stylesheet" th:href="@{/css/main.css}"
+		href="../../css/main.css" />
+</div>
+
+</head>
+
+<body>
+ <!-- sec:authorize="!isAuthenticated()" -->
+	<!-- this is header -->
+	<div class="container-fluid">
+	<div th:fragment="navbar">
+		
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<a class="navbar-brand" th:href="@{/home}">Shop</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse"
+					data-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<!-- show shoppingCart only if user is not yet authenticated -->
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item active"><a
+							class="nav-link" th:href="@{/shoppingCart}">Shopping Cart</a></li>
+						<!-- show registration only if user is not yet authenticated -->
+						<li class="nav-item" sec:authorize="!isAuthenticated()"><a
+							class="nav-link" th:href="@{/registration}">Registration</a></li>
+						<!-- show login only if user is not yet authenticated -->
+						<li class="nav-item" sec:authorize="!isAuthenticated()"><a
+							class="nav-link" th:href="@{/login}">Login</a></li>
+						<!-- show sign out only if user is authenticated -->
+						<li class="nav-item" sec:authorize="isAuthenticated()"><a
+							class="nav-link" th:href="@{/logout}">Sign Out</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+		</div>
+</body>
+</html>

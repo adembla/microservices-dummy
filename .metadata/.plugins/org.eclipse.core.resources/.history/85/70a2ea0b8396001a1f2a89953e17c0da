@@ -1,0 +1,22 @@
+package com.reljicd.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import com.reljicd.model.Login;
+
+@Controller
+public class LoginController {
+
+    @PostMapping("/login")
+    public String login(@RequestBody Login login) {
+    	
+    	
+        if (login != null) {
+            return "redirect:/home";
+        }
+        return "/login";
+    }
+
+}

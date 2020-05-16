@@ -1,0 +1,40 @@
+#notice the use of profiles one for localhost, one for docker
+spring:
+  profiles:
+    active: "dev"
+  main:
+    banner-mode: "off"  
+  freemarker:
+    enabled: false           # Ignore Eureka dashboard FreeMarker templates
+
+eureka:
+   instance:
+       leaseRenewalIntervalInSeconds: 5   # DO NOT DO THIS IN PRODUCTION
+       preferIpAddress: true 
+  
+server:
+  port: ${zipkin.port} 
+        
+---
+
+spring:
+  profiles: dev
+ 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:${discovery.port}/eureka/ # using eureka instead of localhost
+
+
+    
+---
+
+spring:
+  profiles: docker
+   
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka:${discovery.port}/eureka/ # using eureka instead of localhost
+
+    

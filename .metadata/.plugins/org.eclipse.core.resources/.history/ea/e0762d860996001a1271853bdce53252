@@ -1,0 +1,39 @@
+package com.example.gateway.ms.service;
+
+import java.util.HashSet;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Service;
+
+import com.example.gateway.ms.entity.Role;
+import com.example.gateway.ms.entity.User;
+import com.example.gateway.ms.repository.RoleRepository;
+import com.example.gateway.ms.repository.UserRepository;
+
+@Service
+public class UserServiceImpl implements UserService {
+private UserRepository userRepository;
+private RoleRepository roleRepository;
+private BCryptPasswordEncoder bCryptPasswordEncoder;
+@Autowired
+public UserServiceImpl(UserRepository userRepository, RoleRepository roleRepository, BCryptPasswordEncoder bCryptPasswordEncoder) {
+    this.userRepository = userRepository;
+    this.roleRepository = roleRepository;
+    this.bCryptPasswordEncoder = bCryptPasswordEncoder;
+}
+@Override
+public User findUserByEmail(String email) {
+    return userRepository.findByEmail(email);
+}
+@Override
+public User saveUser(User user) {
+    user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+    user.setActive(1);
+    Role userRole = roleRepository.findByRole("ADMIN");
+    HashSet<Role> roles = new HashSet<>();
+    roles.add(userRole);
+    user.setRoles(roles);
+    return userRepository.save(user);
+}
+}

@@ -1,0 +1,61 @@
+package com.reljicd.service.impl;
+
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+import com.reljicd.model.Product;
+import com.reljicd.repository.ProductRepository;
+import com.reljicd.service.ProductService;
+
+@Service
+public class ProductServiceImpl implements ProductService {
+
+    private final ProductRepository productRepository;
+    @Autowired
+    RestTemplate restTemplate;
+
+    @Autowired
+    public ProductServiceImpl(ProductRepository productRepository) {
+        this.productRepository = productRepository;
+    }
+
+    @Override
+    public Product[] findAllProductsPageable(Pageable pageable) {
+//        return productRepository.findAll(pageable);
+    	
+		/*
+		 * String serviceUrl = ""; ResponseEntity<Product[]> results =
+		 * restTemplate.getForEntity(serviceUrl+"/products", Product[].class,new
+		 * HashMap<>());
+		 */
+		
+		final String uri = "http://localhost:1101/inventory-service/products";
+	     
+	    RestTemplate restTemplate = new RestTemplate();
+	     
+	    HttpHeaders headers = new HttpHeaders();
+	    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
+	    HttpEntity<String> entity = new HttpEntity<String>("parameters", headers);
+	     
+	    ResponseEntity<Product[]> results = restTemplate.exchange(uri, HttpMethod.GET, entity, Product[].class);
+	    
+	    return results.getBody();
+		
+    }
+
+    @Override
+    public Optional<Product> findById(Long id) {
+        return productRepository.findById(id);
+    }
+}

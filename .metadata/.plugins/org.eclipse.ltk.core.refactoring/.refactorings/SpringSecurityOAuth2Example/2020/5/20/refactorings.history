@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;com.websystique.springmvc.security&apos; to &apos;zuul-api-gateway/src/main/java&apos;&#x0D;&#x0A;- Original project: &apos;SpringSecurityOAuth2Example&apos;&#x0D;&#x0A;- Destination element: &apos;zuul-api-gateway/src/main/java&apos;&#x0D;&#x0A;- Original element: &apos;SpringSecurityOAuth2Example/src/main/java/com.websystique.springmvc.security&apos;" description="Copy package" destination="=zuul-api-gateway/src\/main\/java" element1="/src\/main\/java&lt;com.websystique.springmvc.security" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1589451540129" version="1.0"/>
+</session>

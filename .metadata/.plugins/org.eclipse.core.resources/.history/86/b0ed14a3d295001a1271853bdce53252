@@ -1,0 +1,9 @@
+@Table(name = "ROLE")
+public class Role {
+@Id
+@GeneratedValue(strategy = GenerationType.AUTO)
+@Column(name = "ROLE_ID")
+private int id;
+@Column(name = "ROLE")
+private String role;
+}

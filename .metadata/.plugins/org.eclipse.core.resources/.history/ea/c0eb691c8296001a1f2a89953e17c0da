@@ -1,0 +1,34 @@
+package com.reljicd.model;
+
+public class Login {
+	
+	private String username;
+	private String password;
+	public Login(String userName, String password) {
+		super();
+		this.userName = userName;
+		this.password = password;
+	}
+	@Override
+	public String toString() {
+		return "Login [userName=" + username + ", password=" + password + "]";
+	}
+	
+	
+	public Login() {
+	}
+
+	public String getUsername() {
+		return username;
+	}
+	public void setUsername(String userName) {
+		this.username = userName;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+}

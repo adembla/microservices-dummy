@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1589212224512_0" label="Java Main Sources" name="Java Main Sources">
+<item elementID="=SpringMVCAnnotationShoppingCart/src\/main\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=SpringMVCAnnotationShoppingCart/src\/main\/resources" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=SpringMVCAnnotationShoppingCart/target\/generated-sources\/annotations" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1589212224618_1" label="Java Test Sources" name="Java Test Sources">
+<item elementID="=SpringMVCAnnotationShoppingCart/src\/test\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=SpringMVCAnnotationShoppingCart/target\/generated-test-sources\/test-annotations" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1589271537729_4" label="microservices" name="microservices">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/inventory" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/zuulEdgeGateway" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/microservices" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/invoice" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/cartui" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/servicediscovery" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/zipkinTimer" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/config" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/customer" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/monitor" type="4"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1589212269097_2" label="Window Working Set" name="Aggregate for window 1589212269096"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1589222780604_3" label="Window Working Set" name="Aggregate for window 1589222780604"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1589379091062_5" label="Window Working Set" name="Aggregate for window 1589379091062"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1589527989920_6" label="Window Working Set" name="Aggregate for window 1589527989920"/>
+</workingSetManager>

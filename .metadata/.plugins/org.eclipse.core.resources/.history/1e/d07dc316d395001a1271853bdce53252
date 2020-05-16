@@ -1,0 +1,7 @@
+package com.example.gateway.ms.service;
+
+public interface UserService {
+	public User findUserByEmail(String email);
+
+	public User saveUser(User user);
+}

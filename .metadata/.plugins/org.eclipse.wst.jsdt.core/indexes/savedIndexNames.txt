@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+I:\Most IMP\Programmers Pulse\Projects\shopping-cart\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+851847694.index
+3439787504.index
+2886136264.index
+1837719739.index
+2453578017.index
+2359761430.index
